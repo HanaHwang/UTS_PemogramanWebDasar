@@ -1,0 +1,5 @@
+use App\\Http\\Controllers\\AbsensiController;
+
+Route::resource('mata-kuliah', MataKuliahController::class);
+Route::get('/absensi', [AbsensiController::class, 'index'])-&gt;name('absensi.index');
+Route::post('/absensi', [AbsensiController::class, 'store'])-&gt;name('absensi.store');
